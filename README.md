@@ -8,10 +8,10 @@ Shell script to create or update user, copied from [this](https://github.com/pas
 ```
 FROM debian
 
-# install create-user script
+# Install create-user script
 COPY --from=tkotosz/create-user /usr/bin/create-user /usr/local/bin/create-user
 
-# install packages
+# Create www-data user
 ARG APP_USER=www-data
 ARG APP_GROUP=www-data
 ARG APP_USER_ID=1000
