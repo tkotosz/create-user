@@ -1,9 +1,9 @@
 FROM debian
 
-# install create-user script
+# Install create-user script
 COPY --from=tkotosz/create-user /usr/bin/create-user /usr/local/bin/create-user
 
-# install packages
+# Create user
 ARG APP_USER=myuser
 ARG APP_GROUP=myuser
 ARG APP_USER_ID=1000
